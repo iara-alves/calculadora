@@ -45,21 +45,20 @@ namespace Calculadora
 
             // OR:  if (nome == "Iara" || nome == "Pedro")
             // AND: if (nome == "Iara" && nome == "Pedro")
-            
 
-           
 
-            if (metodo == "+" || metodo== "-" || metodo == "*" || metodo == "/")
+
+
+            if (metodo == "+" || metodo == "-" || metodo == "*" || metodo == "/")
             {
                 //
                 InserirValor2();
             }
-           
+
             else
             {
                 Console.WriteLine("Tem de inserir o metodo que quer utilizar para a sua conta!");
                 EscolherMetodo();
-                Console.ReadLine();
             }
 
         }
@@ -84,28 +83,24 @@ namespace Calculadora
         {
             int resultado = 0;
 
-            if (metodo == "+")
+            switch (metodo)
             {
-                resultado = primeiroValorInteiro + segundoValorInteiro;
-
-            }
-            else if (metodo == "-")
-            {
-                resultado = primeiroValorInteiro - segundoValorInteiro;
-
-            }
-            else if (metodo == "*")
-            {
-                resultado = primeiroValorInteiro * segundoValorInteiro;
-
-            }
-            else if (metodo == "/")
-            {
-                resultado = primeiroValorInteiro / segundoValorInteiro;
+                case "+":
+                    resultado = primeiroValorInteiro + segundoValorInteiro;
+                    break;
+                case "-":
+                    resultado = primeiroValorInteiro - segundoValorInteiro;
+                    break;
+                case "*":
+                    resultado = primeiroValorInteiro * segundoValorInteiro;
+                    break;
+                case "/":
+                    resultado = primeiroValorInteiro / segundoValorInteiro;
+                    break;
             }
 
             Console.WriteLine(string.Format("Resultado: {0}", resultado));
-            Console.ReadLine();
+            Console.WriteLine();
             InserirValor1();
 
         }

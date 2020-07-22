@@ -49,7 +49,7 @@ namespace Calculadora
 
            
 
-            if (metodo == "+" && metodo== "-" && metodo == "*" && (metodo == "/"))
+            if (metodo == "+" || metodo== "-" || metodo == "*" || metodo == "/")
             {
                 //
                 InserirValor2();
@@ -59,6 +59,7 @@ namespace Calculadora
             {
                 Console.WriteLine("Tem de inserir o metodo que quer utilizar para a sua conta!");
                 EscolherMetodo();
+                Console.ReadLine();
             }
 
         }
@@ -104,6 +105,7 @@ namespace Calculadora
             }
 
             Console.WriteLine(string.Format("Resultado: {0}", resultado));
+            Console.ReadLine();
             InserirValor1();
 
         }
